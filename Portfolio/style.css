@@ -1,0 +1,68 @@
+:root {
+  --bg: #f4e9d3;
+  --text: #2b2420;
+  --muted: #6f6256;
+  --accent: #611919;
+  --line: #dcc9a6;
+  --soft: #fffaf0;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 24px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.logo { font-weight: 700; color: var(--text); text-decoration: none; }
+nav a { margin-left: 18px; color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--accent); }
+
+/* Layout */
+main { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+section:last-child { border-bottom: 0; }
+h1, h2 { }
+h1 { font-size: 2.6rem; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 1.6rem; margin: 0 0 16px; color: var(--accent); }
+p { margin: 0 0 12px; }
+a { color: var(--accent); }
+
+.hero { padding: 90px 0 70px; }
+.hero p { font-size: 1.2rem; color: var(--muted); max-width: 480px; }
+
+/* Recent Projects */
+.projects { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.projects li { padding: 14px 18px; background: var(--soft); border: 1px solid var(--line); border-radius: 10px; }
+.projects .name { font-size: 1.2rem; font-weight: 600; }
+.projects .tech { color: var(--muted); font-size: 0.9rem; margin-bottom: 10px; }
+.projects .preview { width: 100%; height: 320px; border: 2px solid var(--line); border-radius: 8px; background: #fff; }
+.projects .links { margin-top: 10px; }
+.projects .links a { margin-right: 16px; }
+
+footer { padding: 24px; text-align: center; color: var(--muted); border-top: 1px solid var(--line); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 2rem; }
+  nav a { margin: 0 12px 0 0; }
+}
